@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let g of grupos">
+        <a href="#" (click)="grupoSelecionado.emit(g)">{{g.descricao}}</a>
+    </li>
+</ul>

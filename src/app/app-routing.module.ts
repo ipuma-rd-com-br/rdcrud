@@ -6,9 +6,14 @@ import { HomeComponent } from './components/home/home.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { ContatoComponent } from "./components/contato/contato.component";
 
-const routes: Routes = [
+export const ROUTES: Routes = [
   {
-    path: "",
+    path: "index",
+    redirectTo: "home",
+    pathMatch: "full"
+  },
+  {
+    path: "home",
     component: HomeComponent,
   },
   {
@@ -19,11 +24,16 @@ const routes: Routes = [
     path: "contato",
     component: ContatoComponent,
   },
+  {
+    path: "**",
+    redirectTo: "home",
+    pathMatch: "full"
+  }
 ];
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ROUTES)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

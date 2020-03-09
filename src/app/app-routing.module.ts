@@ -8,7 +8,7 @@ import { ContatoComponent } from "./components/contato/contato.component";
 
 export const ROUTES: Routes = [
   {
-    path: "index",
+    path: "",
     redirectTo: "home",
     pathMatch: "full"
   },
@@ -26,7 +26,7 @@ export const ROUTES: Routes = [
   },
   {
     path: "**",
-    redirectTo: "home",
+    redirectTo: "home", // fazer um componente de not found page
     pathMatch: "full"
   }
 ];
